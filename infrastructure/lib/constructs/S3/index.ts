@@ -41,9 +41,9 @@ export class S3 extends Construct {
         bucketName: `chapter-5-web-bucket-${unique_id}-${(
           process.env.NODE_ENV || ''
         ).toLocaleLowerCase()}`,
-        websiteIndexDocument: 'index.html',
-        websiteErrorDocument: 'index.html',
-        publicReadAccess: true,
+        //websiteIndexDocument: 'index.html',
+        //websiteErrorDocument: 'index.html',
+        publicReadAccess: false,
         blockPublicAccess: BlockPublicAccess.BLOCK_ACLS,
         accessControl: BucketAccessControl.BUCKET_OWNER_FULL_CONTROL,
         removalPolicy: RemovalPolicy.DESTROY,
